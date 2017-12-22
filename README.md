@@ -7,8 +7,8 @@ Gist Api Test Sampe
 ## Configuration:
 * Edit config.properties (gistapitest/src/test/resrouces/config)
 * Add
- * user=
- * auth_token=
+	* user=
+	* auth_token=
 
 ## Run:
 * mvn test
