@@ -18,7 +18,7 @@ public interface IGistsRestApi {
 
     @DELETE("/gists/{id}")
     Call<GistResponse> deleteGist(@Header("Authorization") String authToken, @Path("id") String gistId);
-	
+    
     @PATCH ("/gists/{id}")
     Call<GistResponse> editGist(@Header("Authorization") String authToken, @Body RequestBody requestBody);
 
@@ -26,7 +26,7 @@ public interface IGistsRestApi {
     Call<GistResponse> getPublicGists();
     
     @GET("/gists/{id}/commits")
-    Call<List<GistResponse>>  listGistCommits(@Header("Authorization") String authToken, @Path("id") String gistId);
+    Call<List<GistResponse>> listGistCommits(@Header("Authorization") String authToken, @Path("id") String gistId);
     
     @PUT("/gists/{id}/star")
     Call<GistResponse> starGist();
@@ -39,5 +39,5 @@ public interface IGistsRestApi {
     
     @POST("/gists/{id}/forks")
     Call<GistResponse> forkGist();
-    
+  
 }

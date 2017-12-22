@@ -73,6 +73,10 @@ public class GistsApiTest {
 					                              json.toString());
 			Call<GistResponse> create = gistRestApi.createGist(AUTH_TOKEN, requestBody);		
 			Response<GistResponse> response = create.execute();
+			if (!response.isSuccessful()) {
+				throw new IllegalArgumentException(response.message());
+			}
+				
 			id = response.body().getId();
 			System.out.println(response.body().getId());
 			assertEquals("Created", response.message());
