@@ -1,5 +1,5 @@
 # gistapitest
-Gist Api Test Sampe
+Gist Api Test Sample
 
 ## Tested with:
 * java jdk1.8.0_11
